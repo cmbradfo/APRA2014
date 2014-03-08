@@ -1,0 +1,106 @@
+% This is the official working version
+% Last updated 2011 March 19
+
+\documentclass[11pt,letterpaper]{spie}
+
+\usepackage{natbib}
+\usepackage{epsfig}
+\usepackage{graphicx}
+\usepackage{pgf}  
+\usepackage{caption}
+\usepackage{multirow}
+%\usepackage{ctable}
+\usepackage[normalem]{ulem}
+
+\citestyle{aa}
+
+%\oddsidemargin = 1.46cm
+%\evensidemargin = 0.46cm
+\topmargin = -0.1in
+%\leftmargin = -1.0in
+\textheight = 9.3 in
+%\textwidth = 7.5in
+
+\input macros % - Need this for journal abbreviations in the .bib file
+
+\input latex_defs_ja
+
+\input formatted_references 
+
+\begin{document}
+\mainbaseline
+
+% -----------------------------------------------------------------------------
+
+\newpage
+
+\tableofcontents
+
+\noindent{\it Note: As per the ROSES-2011 Solicitation NNH11ZDA001N
+Appendix D.3 Section 1.2.2.3: Owing to the anticipated greater degree
+of complexity, the scientific/technical/ management section of
+proposals for a suborbital flight investigation may be 20 pages long
+instead of the default 15 pages specified in the NASA Guidebook for
+Proposers.}
+
+\newpage
+
+%\parskip0pt
+
+%\citet{pober13baobab,pober13window,moore13,stefan13,parsons12a,parsons12b}
+
+\pagenumbering{arabic}
+\pagestyle{plain}
+
+\input{section_introduction}
+
+\input{section_science}
+
+\input{section_instrument}
+
+\input{section_flight_planning}
+
+\input{section_schedule_summary}
+
+%\input{section_results}
+
+\input{summary_table}
+
+\clearpage
+
+\newpage
+
+\pagestyle{empty}
+
+\bibliographystyle{unsrt_no_month}
+%{astron}
+
+%{astron}
+
+\bibliography{master_references}
+
+\input{bio_sketch}
+
+%\newpage
+
+%\input{section_jpl_sow}
+
+\newpage
+
+\input{section_budget_justification}
+
+\newpage
+
+\input{section_people_commitments}
+
+\newpage
+
+%\input{BradfordCPSupport}
+
+\newpage
+
+\input{section_facil}
+
+\end{document}
+
+

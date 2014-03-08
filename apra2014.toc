@@ -1,0 +1,25 @@
+\contentsline {section}{\numberline {1}Executive Summary}{1}
+\contentsline {section}{\numberline {2}Relevance to NASA Objectives}{2}
+\contentsline {section}{\numberline {3}Scientific Program}{3}
+\contentsline {subsection}{\numberline {3.1}Background}{3}
+\contentsline {subsubsection}{\numberline {3.1.1}History of Star Formation}{3}
+\contentsline {subsubsection}{\numberline {3.1.2}Astrophysics of [C{\sc ii}]}{4}
+\contentsline {subsection}{\numberline {3.2}Science Goals}{5}
+\contentsline {subsubsection}{\numberline {3.2.1}A Star Formation Evolution Survey Using [C{\sc ii}]\ (Science Goal 1\hbox {})}{6}
+\contentsline {subsubsection}{\numberline {3.2.2}Power Spectrum of [C{\sc ii}](Science Goal 2\hbox {})}{6}
+\contentsline {section}{\numberline {4}Instrument}{8}
+\contentsline {subsection}{\numberline {4.1}Design Considerations and Sensitivity}{8}
+\contentsline {subsection}{\numberline {4.2}Spectrometer Architecture}{10}
+\contentsline {subsection}{\numberline {4.3}Kinetic-Inductance Detector (KID) Arrays}{10}
+\contentsline {subsection}{\numberline {4.4}Readouts}{14}
+\contentsline {subsection}{\numberline {4.5}Telescope}{15}
+\contentsline {subsection}{\numberline {4.6}Cryogenics}{15}
+\contentsline {subsection}{\numberline {4.7}Pointing and System}{16}
+\contentsline {section}{\numberline {5}Flight Operations}{17}
+\contentsline {subsection}{\numberline {5.1}Scheduling}{17}
+\contentsline {subsection}{\numberline {5.2}In-Flight Data Operations}{18}
+\contentsline {section}{\numberline {6}Plan of Work}{18}
+\contentsline {subsection}{\numberline {6.1}Schedule}{18}
+\contentsline {subsection}{\numberline {6.2}Division of Labor and Personnel}{19}
+\contentsline {paragraph}{Superconducting Device Fabrication at the Jet Propulsion Laboratory Microdevices Laboratory (MDL).}{8}
+\contentsline {paragraph}{Computing.}{8}

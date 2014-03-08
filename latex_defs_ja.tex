@@ -1,0 +1,81 @@
+% ICarIS specific definitions
+\def\icarisfull{{Ionized Carbon Imaging Spectrometer}}
+\def\icaris{{\sc ICarIS}}
+% 
+\def\namefull{Spectroscopic Terahertz Airborne Receiver for Far-InfraRed Exploration}
+\def\name{{\sc starfire}}
+
+\newcommand{\Tc}{T$_{\rm c}$}
+\newcommand{\response}{$\mathcal{R}_x$}
+\newcommand{\Sxx}{$\mathrm{S_{xx}}$}
+% figure layout commands
+\newcommand{\linefig}{\vspace{-0.1in}\rule{\columnwidth}{0.5pt}\vspace{-0.2in}}
+\newcommand{\toplinefig}{\vspace{-0.2in}\rule{\columnwidth}{0.5pt}\vspace{-0.15in}}
+\newcommand{\captionbaseline}{\renewcommand{\baselinestretch}{0.9}} % SPECIFY BASELINES HERE
+\newcommand{\mainbaseline}{\renewcommand{\baselinestretch}{0.95}} % SPECIFY BASELINES HERE
+
+% Design parameters
+\newcommand{\NpixSpat}{24}
+\newcommand{\NpixSpec}{256}
+\newcommand{\nbolos}{6144}
+\newcommand{\diam}{2.5}
+\newcommand{\R}{450}
+\newcommand{\D}{2.5~m}
+
+\newcommand{\mum}{\ensuremath{\mu\mathrm{m}}}
+\newcommand{\solar}{\ensuremath{\odot}}
+\newcommand{\vect}[1]{\mathbf{#1}}
+
+\def\L{{\it Left:}}
+\def\R{{\it Right:}}
+
+\def\Figure#1#2#3#4{
+\begin{figure}[h]
+\begin{center}
+\includegraphics[scale=#4]{#1}
+\end{center}
+\caption{#2}
+\label{#3}
+\end{figure}
+}
+
+\def\Table#1#2#3#4#5{\begin{table}[h]
+\caption{#1}
+\label{#2}
+\center{
+\begin{tabular}{#3}
+% Headers go here.
+\hline
+#4 \\
+\hline
+% Main body of table goes here.
+#5
+\hline
+\end{tabular}
+}
+\end{table}
+}
+
+% Surface brightness sensitivity unit
+\def\sbs{\ensuremath{\rm{Jy~sr}^{-1}\sqrt{\rm{sec}}}}
+\def\sbu{\ensuremath{\rm{Jy~sr}^{-1}}}
+\def\psu{\ensuremath{({\rm Jy~sr}^{-1})^2~({\rm Mpc}~h^{-1})^3}}
+\def\E#1{\ensuremath{\times10^{#1}}}
+
+\newcommand{\zspec}{Z-Spec}
+\newcommand{\cii}{[C{\sc ii}]}
+\newcommand{\hii}{H{\sc ii}}
+\newcommand{\hi}{H{\sc i}}
+\def\ci{[C{\sc I}]}
+\def\oi{[O{\sc i}]}
+\def\oiii{[O{\sc iii}]}
+\def\nii{[N{\sc ii}]}
+\newcommand\procspie{{Proc.~SPIE}}% 
+          % Proceedings of the SPIE 
+
+
+\def\Citet#1{{\bf \citet{#1}}}
+\def\Citep#1{{\bf \citep{#1}}}
+
+% Missions
+\def\cobe{{\it COBE}}

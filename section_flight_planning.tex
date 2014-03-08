@@ -1,0 +1,121 @@
+\section{Flight Operations}
+\label{sec:FlightOperations}
+
+We plan for two North American flights, each overnight, with a maximum flight time of approximately 24 hours, during which science data will be primarily acquired during the night.  North American flights from Ft. Sumner, NM, or Palestine, TX, are typically scheduled in June or September to take advantage of ``turnaround'' wind conditions to produce the longest flight times.  The availability of scientific targets strongly favors June for flights of \name. In June 2016, the planets Mars, Saturn, and Jupiter are available at modest elevation for calibration.  The H-ATLAS fields at the NGP as well as GAMA12 and GAMA15 are available for pointed observations of lensed submillimeter galaxies in the early part of the night.  Further north, well-studied small deep fields such as GOODS-N and the Groth Strip are available for long integrations testing the intensity mapping and stacking analyses.
+
+% In Figure \ref{fig:Observing}, we show the availability of various fields for both pointed and mapping observations, and the planets available for absolute calibration.
+
+% \begin{figure}[h]
+%   \begin{tabular}{ll}
+%     \begin{minipage}{3.25in}
+%       \begin{center}
+% 	\includegraphics[width=3.25in]{observing_june2016.pdf}
+% %{madau_plot_somerville08.pdf}
+%       \end{center}     
+%     \end{minipage} &
+%     \begin{minipage}{3.25in}
+%       \begin{center}
+% 	\caption {\small The sky above New Mexico on 1 June 2016.  The planets Mars, Saturn, and Jupiter are available at modest elevation for calibration.  The H-ATLAS fields at the NGP as well as GAMA12 and GAMA15 are available for pointed observations of lensed submillimeter galaxies in the early part of the night.  Further north, well-studied small deep fields such as GOODS-N and the Groth Strip are available for long integrations testing the intensity mapping and stacking analyses.}
+% 	\label{fig:Observing}
+%       \end{center}
+%     \end{minipage}
+%   \end{tabular}
+% \end{figure}
+
+% \begin{figure}[h]
+%     \begin{minipage}{6.5in}
+%       \begin{center}
+% 	\includegraphics[width=6.5in]{}
+%       \end{center}
+%     \end{minipage}
+%     \caption {\small The sky above New Mexico on 1 June 2016.  The planets Mars, Saturn, and Jupiter are available at modest elevation for calibration.  The H-ATLAS fields at the NGP as well as GAMA12 and GAMA15 are available for pointed observations of lensed submillimeter galaxies in the early part of the night.  Further north, well-studied small deep fields such as GOODS-N and the Groth Strip are available for long integrations testing the intensity mapping and stacking analyses.}
+% \label{fig:Observing}
+% \end{figure}
+
+% We plan for a mission length of two weeks, for a total time aloft of
+% 504 hours.  We assume 2 hours per day are taken up with recycling of
+% the $^3$He fridges and other overhead operations, and 10\% of the time
+% is given to calibration and pointing observations.  This leaves 415
+% hours to be divided between two one-square-degree fields, for an
+% approximate integration time per field of $\sim$200 hours.
+
+The best launch opportunities occur at sunrise.  We expect to be at float altitude at approximately 10 AM.  This will give us 8 hours to cycle the fridges, check the detectors, and verify the pointing.  The fridge hold times are sufficient that a single cycling at the beginning of the flight will hold for the entire flight.  
+Science observations will begin at sunset.  We anticipate 10 - 12 useful hours of science observations, including some after sunrise, in our calculations.
+
+To establish the pointing initially, we will observe planets or other bright targets to establish the offset between the star cameras and the submillimeter optics.  The accuracy of the mechanical alignment and the blind pointing solution from the star cameras should be better than 2\arcmin, allowing the target to appear in the FOV created by the $5\times5$ pixel array from the image slicer.  A co-add of the spectral pixels will create a continuum image with high S/N.  This offset will need to be periodically re-checked throughout the flight.  These bright sources will also calibration of the PSF and focus checks for the secondary mirror.
+
+For pointed observations, the two star cameras provide updates at 1 Hz.  In between camera updates, the position is held based on the gyroscopes, the current generation of which on \blast\ have drifts of 1\arcsec/second.  We will use improved versions with only 0.05\arcsec/second drift, allowing extremely accurate maintained positions between star camera solution updates.  This accuracy will be used to hold the target with in the slicer FOV.  The inevitable small motions around the nominal pointing center are actually advantageous as they modulate the target signal.  The reconstructed position of the target within the focal plane will be better than a few arcseconds, allowing efficient coaddition of signal from the target.  The off-target pixels as well as telluric-line-dominated spectral channels will be used to remove any effects of time-varying atmospheric emission.
+
+For mapping observations, we will use a scan strategy will be similar to that of \blast, with scans at fixed elevation while the FOV is moved back and forth in
+azimuth.  The inner frame is then stepped to cover the entire field.
+In this mode, the scanning modulation helps to separate atmosphere and instrument drift to recover large scales in the image.
+
+\subsection{Scheduling}
+
+The flight software for \name\ will be designed so that it can operate
+%\icaris\ will function 
+autonomously after launch.  However, because line-of-sight communication is maintained for the bulk of the flight, emergency changes can be implemented if necessary. The target fields
+will be decided before the flight.  The autonomous scheduling system
+(developed for \blast) will use schedule files that consist of a
+sequential list of observations or actions as a function of the Local
+Sidereal Time.  This system is robust against temporary system
+failures because the telescope only needs to know the current time and
+location to resume operation upon recovery.  Using a local sidereal
+clock rather than a clock fixed in some time zone, it is possible to
+account for purely astronomical visibility constraints (such as the RA
+of the Sun and of the astronomical targets) using a static
+description.
+
+For every launch opportunity, six schedule files are generated, which account for 3 different cases flight latitude and longitude, and two cases of measured instrument senstivity.
+%The
+%latitude of the gondola can change by as much as $\sim 15^\circ$
+%during a flight, hence three different schedules are created in
+%latitude bands that are $5^\circ$ wide, with $1^\circ$ of overlap.
+The gondola uses the GPS to decide which schedule file to use,
+appropriate for the declination of the target field.  Two sets of
+these three schedules are made: the first set assumes the instrument
+is working with the target sensitivities; the second assumes
+degradations of the telescope beam size by a factor of $\sqrt{2}$, and
+sensitivity by a factor of 2.  At the beginning of the flight, the
+sensitivities and beam size are estimated from scans across calibrators.  Based on this information the ground station team can decide which of the two
+sets of schedule files the instrument should use, and switch between
+the two using a single command.
+
+\subsection{In-Flight Data Operations}
+
+We will use several methods for primary calibration, most based on the
+successful approaches used by the direct-detection millimeter-wave
+spectrometer \zspec (e.g.,
+\Citep{2010ApJ...722..668N,2011ApJ...731...83K}).  The \name\ bands
+are sufficiently wide that a continuum calibrator can be used to
+calibrate both the absolute and relative response of the channels, and
+channels may also be co-added.  Absolute calibration can be checked againt the \herschel-SPIRE FTS measurements of the 
+planets Mars \citep{swinyard10mars} and Saturn \citep{fletcher12}.
+
+%Sources such as the red hypergiant
+%star VY CMa, along with almost a dozen others, have been
+%well-calibrated by \blast\ \Citep{truch09} and 
+
+For frequency calibration we will begin with a Fourier transform
+spectrometer (FTS) as a laboratory calibrator, as was done for \zspec.
+\herschel\-SPIRE FTS observations of evolved stars 
+\citep{groenewegen11,wesson11} such as NGC 7027.
+%in bright, known redshift IRAS galaxies.  
+A similar technique was used with
+great success for \zspec\ using IRC+10216.  For \name, we have the additional
+frequency calibration scale of line emission from the atmosphere
+itself (since these lines will be narrow and do not suffer the severe
+pressure broadening present in ground-based observations).
+
+% Because \icaris\ can make a map of a pointing source, determining the
+% offset between the star cameras and the instrument will be
+% straightforward, similar to what was done for \blast.
+
+The data rate from the \name\ detectors will be substantial, but not
+prohibitive.  Each of the 6000 detectors will be sampled at a rate of
+30 Hz, which, assuming 32 bit samples, is a rate of only 720 kB/s, or
+2.6 GB per hour.  Over the course of a 24 hour flight, this results in
+a total data volume of only $\sim70$~GB, including overheads for
+housekeeping data.
+
+%\pagebreak
