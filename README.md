@@ -1,8 +1,11 @@
 APRA2014
 ========
 To download:
+
 In a directory where you want to have the LaTeX files:
+
   git clone https://github.com/jaguirre/APRA2014/
+
 This will create the directory APRA2014.  The Makefile should compile everything to a PDF, assuming you have pdflatex and bibtex.
 
 To edit:
