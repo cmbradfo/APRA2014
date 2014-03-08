@@ -12,7 +12,7 @@ To edit:
 
 The workflow proceeds like this.  Make edits to your local document.  When you're happy,
 
-  git commit <filename>
+  git commit filename
 
 This lets git know you want your changes to be brought in.
 
@@ -26,13 +26,13 @@ will put all changes back in the master repository.
 
 To add new files:
 
-  git add <filename>
+  git add filename
 
   git commit
 
 To remove a file from the repository:
 
-  git rm <filename>
+  git rm filename
 
   git commit
 
