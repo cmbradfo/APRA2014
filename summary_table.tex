@@ -2,24 +2,25 @@
 \caption{\name\ Instrument Parameters}
 \label{tab:Parameters}
 \center{
-\begin{tabular}{l|c|c|c|c|l}
+\begin{tabular}{l|c|c||c|c||l}
 
 %and & $z_{mean}$ & Time per beam & $I_{\cii}$ & $P_{shot}$ & $P_N$ & S/N & \multicolumn{2}{c}{Detections} \\
 %& & [hr] & [Jy~sr$^{-1}$] & \multicolumn{2}{c}{[\psu]} & & $>5\sigma$ & $>3\sigma$ \\
 \hline
 \multicolumn{6}{l}{\bf Telescope} \\
 \hline
-Temperature & \multicolumn{5}{l}{250K} \\
-Used diameter & \multicolumn{5}{l}{2.4~m (primary mirror is pupil stopped)}\\
-Emissivity & \multicolumn{5}{l}{0.01} \\
+Temperature & \multicolumn{5}{l}{270K} \\
+Diameter & \multicolumn{5}{l}{1.8~m} \\
+Illumination & \multicolumn{5}{l}{0.93 (primary mirror is pupil stopped)}\\
+Emissivity & \multicolumn{5}{l}{0.04} \\
 Primary $f/\#$ & \multicolumn{5}{l}{1.25} \\
-Gregorian $f/\#$ & \multicolumn{5}{l}{5} \\
-Available FOV & \multicolumn{5}{l}{29\arcmin $\times$ 29\arcmin} \\
+Ritchey-Chretien $f/\#$ & \multicolumn{5}{l}{5} \\
+%Available FOV & \multicolumn{5}{l}{29\arcmin $\times$ 29\arcmin} \\
 \hline
 \multicolumn{6}{l}{\bf Detectors} \\
 \hline
 TiN \Tc & \multicolumn{5}{l}{0.9 K} \\
-Base temperature & \multicolumn{5}{l}{150 mK} \\
+Base temperature & \multicolumn{5}{l}{250 mK} \\
 %$d\ln{R}/d\ln{T}$ & \multicolumn{4}{c}{100} \\
 %Heat Capacity & \multicolumn{4}{c}{300 fJ/K} \\
 %$P_{saturation}/P_{absorbed}$ & \multicolumn{4}{c}{20} \\
@@ -29,22 +30,20 @@ KID resonant frequencies & \multicolumn{5}{l}{100--250~MHz}\\
 MAKO pixel response & \multicolumn{5}{l}{$1.2\times10^{7}$ $(\delta f/f)\,\rm W^{-1}$, measured}\\
 \icaris\ pixel response & \multicolumn{5}{l}{$4\times10^{8}$ $(\delta f/f)\,\rm W^{-1}$, scaled from MAKO as (volume)$^{-1}$ and \Tc$^{-2}$}\\
 \Sxx (due to TLS) & \multicolumn{5}{l}{$1.0\times10^{-18}$ $(\delta f/f)^2\,\rm Hz^{-1}$, same as MAKO}\\
-Detector efficiency w/ lens & \multicolumn{5}{l}{$>$70\%} \\ 
+Detector efficiency w/ horns & \multicolumn{5}{l}{65\%} \\ 
 Detector NEP (optical) & \multicolumn{5}{l}{$2.5 \times 10^{-18}$ W$/{\sqrt{{\rm Hz}}}$} \\
 $P_{absorbed}$ & \multicolumn{5}{l}{9 / 6 fW} \\
 Photon NEP & \multicolumn{5}{l}{$5.4 / 3.5 \times 10^{-18}$ W$/{\sqrt{{\rm Hz}}}$} \\
-
 %$\rm{NEP}^2_{photon}/\rm{NEP}^2_{total}$ & \multicolumn{4}{c}{0.7 / 0.6} \\
 %$\tau_{optical}$ & \multicolumn{4}{c}{11 / 16 ms} \\
-
 \hline
 \multicolumn{6}{l}{\bf Spectrometer} \\
 \hline
-& \multicolumn{2}{c|}{Short Wavelength} &  \multicolumn{2}{c}{Long Wavelength} & \\
-\hline
-Format & \multicolumn{4}{c}{$ 25~{\rm spatial} \times 64~{\rm spectral}$}\\
+Format & \multicolumn{4}{c}{2 modules, each $ 25~{\rm spatial} \times 64~{\rm spectral}$}\\
 $R$ & \multicolumn{4}{c}{450 (670 km s$^{-1}$)} \\
-Optical efficiency & \multicolumn{4}{c}{30\%, single polarization, including detector} \\
+Optical efficiency & \multicolumn{4}{c}{40\%, exclusive of horn and detector} \\
+\hline
+& \multicolumn{2}{c || }{Short Wavelength} &  \multicolumn{2}{c ||}{Long Wavelength} & \\
 \hline
 Wavelength range & 240 -- 276 & 276 -- 317 & 317 -- 365 & 365 -- 420 & \mum \\
 $\Delta \nu$ & 2.58 & 2.25 & 1.95 & 1.70 & GHz \\
