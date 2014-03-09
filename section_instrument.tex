@@ -114,8 +114,15 @@ instantaneous bandwidth and good sensitivity.
 \label{sec:Spectrometer} 
 \Responsible{Hailey-Dunsheath}
 
+In order to reduce loading, a stop is placed at an image of secondary.  %(make a stab at reducing 4% emissivity)
+Two (?) cold chopping mirrors capable of chopping in azimuth along diffraction grating slit for each spectrometer.  One chopping mirror that addresses both slits would be nice - then we could swing the source from one module to the other.  Otherwise, we chop on one module, then chop on the other.
+A (sub)millimeter tracking camera aligned with telescope optical axis
+%Two spectrometer modules (collimating mirror, diffraction grating, focusing mirror), one covering 240-317 microns, the other 317 - 420.  The mirrors and grating are optimized to only cover half of each band instantaneously with good Strehl; gratings are tipped to cover the other half.
+Horns plus the diffraction grating define the primary illumination.
 %To achieve integral-field spectroscopy over a 2-D field, the spectrometer optics begin by slicing a $5\times5$ pixel field to form a 25 pixel long pseudo-slit, which feeds the spectrometer. 
-For optimal efficiency, two independent spectrometer modules and image slicers with separate fields of view are combined to cover the full 240-420 \mum\ range: a short wavelength module covering 240-317 \mum, and a long wavelength module covering 317-420 \mum. 
+For optimal efficiency, two independent spectrometer modules 
+%and image slicers with separate fields of view 
+are combined to cover the full 240-420 \mum\ range: a short wavelength module covering 240-317 \mum, and a long wavelength module covering 317-420 \mum. 
 %The slicing optics follow the same design as successfully implemented in the PACS and
 %FIFI-LS spectrometers \citep{looney03apj,looney03spie}; see Figure \ref{fig:Slicer}. 
 
@@ -249,12 +256,12 @@ To offset the increase in TLS noise due to the lower operating temperature, we w
 
 \name\ will field 2 arrays, each with 64 (spectral) $\times$25 (spatial) =1600 detectors, packed hexagonally with a 1.36-mm pitch.  Each will require 2 readout chains, with $\sim$800 channels each.  The goal will be to field this on a single wafer-sized die, but mosaicing 2 dies into the package is a fallback option, producing only a small gap in the spectral direction which can moved away from lines of interest by tuning the grating.  The package will provide a free-space $\lambda/4$ backshort under the device wafer, as used in MAKO.
 
-\vspace{0.05in}{\bf Horn array.}  {\bf \color{red} TBD}
+\vspace{0.05in}{\bf Horn array.}  {\color{red} TBD}
 % Concentrating the radiation onto the small inductor requires a concentrating lens, and lens arrays have been designed and prototyped by our group.   Figure~\ref{fig:lenses} shows a prototype silicon lens array machined by Veldlaser (Heerenberg, Holland), as well as the measured profiles.   While \icaris\ requires somewhat greater concentration than these lenses, corresponding to a faster lens with greater curvature, this is not a problem for the laser manufacturing processes as arbitrary depths are possible.  We have performed electromagnetic simulations to verify that good efficiency can be achieved coupling to the 200-\mum-diameter. (Figure~\ref{fig:lenses}).   The lens is a hyperboloid with a total sag of 300~\mum (if sized at 1.5 mm), and it provides a total efficiency of $>$75\%.  To provide an anti-reflection (AR) coating, the lenses will be coated with a quarter-wavelength layer of parylene, a standard electronics packaging process.  The microlens arrays will be simply clamped to the KID arrays, aligned using a pin and slot jig.
 
 \begin{figure}[t!]
 \begin{center}
-\captionbaseline\caption{\small {\bf \color{red} THIS FIGURE TO BE REPLACED WITH HORN ARRAY.}}  
+\captionbaseline\caption{\small {\Responsible{THIS FIGURE TO BE REPLACED WITH HORN ARRAY.}}}  
 %Microlens arrays. TOP: 1-mm pitch lens array prototype machined from a silicon wafer by Veldlaser, with measured profile over several lenses shown at right.  BOTTOM:  f/0.8 microlens design for ICarIS, with hexagonal packing.  This simulation is for a 1.5-mm diameter lens as an upper bound to the final lens size, in order demonstrate sufficient power concentration.  HFSS simulations indicate 75\% of the power incident in a uniform plane wave is coupled to the designed 200-\mum\ diameter inductor.  The coupling to a more centrally-concentrated field distribution (such as the image of a point source centered on the pixel) will be higher. }
 \linefig\vspace{-0.35in} \label{fig:lenses}
 \end{center}
