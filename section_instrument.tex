@@ -78,9 +78,10 @@ aperture size, and the performance improvement is modest because even
 a balloon altitudes there is $\sim$1\% emission from the 250~K
 atmosphere.  In light of these calculations, and our experience with
 ballooning with \blast\ \Citep{devlin04,pascale08} and spectroscopy
-with Z-Spec \Citep{inami08,earle06,bradford04,bradford03,naylor03}, we
-have arrived at a \D\ off-axis ambient-temperature telescope, with
-carefully controlled illumination to avoid spillover to warm surfaces.
+with Z-Spec \Citep{inami08,earle06,bradford04,bradford03,naylor03}, we believe we can demonstrate near atmosphere-limited performance using the existing BLAST on-axis \D\ Ritchey-Chr\'{e}tien telescope
+%have arrived at a \D\ off-axis 
+ambient-temperature telescope, with
+carefully controlled primary illumination, Lyot stops at an image of the secondary, and baffling to avoid spillover to warm surfaces.
 These parameters and sensitivity factors for our design are given in
 Table \ref{tab:Parameters}.
 
@@ -96,7 +97,8 @@ For the relatively massive galaxies we are targeting, a resolution $R = 450$ (67
 %reduce the detector count. 
 In principle, the required spectral resolution and large area mapping
 could be achieved with either a Fabry-Perot (FP) or FTS spectrometer
-design. However, both of these require a moving component, and both
+design. However, both of these 
+%require a moving component, and both
 incur sensitivity penalties.
 %for follow-up of sources with known
 %positions. 
@@ -110,23 +112,15 @@ instantaneous bandwidth and good sensitivity.
 
 \subsection{Spectrometer Architecture} 
 \label{sec:Spectrometer} 
+\Responsible{Hailey-Dunsheath}
 
-To achieve integral-field spectroscopy over a 2-D field, the spectrometer optics begin by slicing a $5\times5$ pixel field to form 
-a 25 pixel long pseudo-slit, which feeds the spectrometer. 
-For optimal efficiency, two independent spectrometer
-modules and image slicers with separate fields of view are combined to
-cover the full 240-420 \mum\ range: a short wavelength module covering
-240-317 \mum, and a long wavelength module covering 317-420 \mum. The slicing
-optics follow the same design as successfully implemented in the PACS and
-FIFI-LS spectrometers \citep{looney03apj,looney03spie}; see Figure \ref{fig:Slicer}. 
+%To achieve integral-field spectroscopy over a 2-D field, the spectrometer optics begin by slicing a $5\times5$ pixel field to form a 25 pixel long pseudo-slit, which feeds the spectrometer. 
+For optimal efficiency, two independent spectrometer modules and image slicers with separate fields of view are combined to cover the full 240-420 \mum\ range: a short wavelength module covering 240-317 \mum, and a long wavelength module covering 317-420 \mum. 
+%The slicing optics follow the same design as successfully implemented in the PACS and
+%FIFI-LS spectrometers \citep{looney03apj,looney03spie}; see Figure \ref{fig:Slicer}. 
 
-In Figure \ref{fig:SpectrometerModule} we show the long wavelength spectrometer module. A powered mirror collimates the light passing through the pseudo-slit, and forms an image of the telescope aperture on the grating. The grating itself serves
-as a cold pupil that controls the telescope illumination. The grating is
-operated in first order, and is sized to provide a slit-limited resolving
-power of $R=450$. A second powered mirror then focuses the dispersed light
-onto the focal plane. The long wavelength module has a size of $60 \times 32 \times
-22$~cm; the linear dimensions of the short wave module are a factor of
-1.3 smaller.
+In Figure \ref{fig:SpectrometerModule} we show the long wavelength spectrometer module. A powered mirror collimates the light passing through the pseudo-slit, and forms an image of the telescope aperture on the grating. The grating itself serves as a cold pupil that controls the telescope illumination. The grating is
+operated in first order, and is sized to provide a slit-limited resolving power of $R=450$. A second powered mirror then focuses the dispersed light onto the focal plane. The long wavelength module has a size of $60 \times 32 \times 22$~cm; the linear dimensions of the short wave module are a factor of 1.3 smaller.
 
 The simple spectrometer design employed here produces a moderate amount of
 anamorphic magnification, such that the image of a spectrally unresolved
@@ -138,32 +132,42 @@ at f/2.4, such that an image of a point source is 0.91mm in size. We
 design our hexagonal array of microlenses to have a pitch in the spatial
 direction of 1.18mm, such that we slightly undersample the spatial
 resolution element, and oversample the spectral resolution element. With a
-25x64 pixel array we achieve an instantaneous bandwidth of $\approx$$14\%$
+$25\times64$ pixel array we achieve an instantaneous bandwidth of $\approx$$14\%$
 for each of the 25 spatial positions, and 2 grating settings (with the
 grating tipped by 5.5 degrees) are sufficient to cover the entire
 $\approx$$28\%$ band. The short wave module is imaged at f/3.3 to maintain
-a constant image size, and the same array of hexagonally packed
-microlenses will be used to cover this band.
+a constant image size, and the same array of hexagonally packed horns
+%microlenses 
+will be used to cover this band.
  
 Both spectrometer modules are contained within a 1 K optical approximately cavity approximately 70 cm in diameter and 25 cm tall, painted black on the inside and using black baffles to control stray light and keep loading on the detectors low. Light enters this cavity after passing through low pass filters at 77K, 40K, and 4K, with a capacitive mesh bandpass filter at its entrance.  IR blocking
 filters between each of the low pass filters cut down on the loading
 and increase the cryogen hold time.  The total size of the spectrometer optics leads to a a cryostat of only slightly large overall size and cryogenic volume as the Z-Spec cryostat.
  
+% \begin{figure}[t]
+%   \begin{tabular}{lc}
+%     \begin{minipage}{3.5in}	
+% 	\includegraphics[width=3.5in]{slit_mapping.pdf}
+% 	\captionbaseline\caption{\small {\it Right:} The image slicing optics, which present a long pseudo-slit to the spectrometer. {\it Above :} The mapping of the 2-D focal plane to a single long pseudo-slit.  These figures adapated from \citet{looney03apj} for the design of FIFI-LS.}\label{fig:Slicer}
+%     \end{minipage} &	
+%  \begin{minipage}{3in	}
+%       \begin{center}	
+% 	\includegraphics[width=3in]{image_slicer_adapted.pdf}
+%      \end{center}	
+%    \end{minipage} 
+% %   \begin{minipage}{2in}
+%  %  \end{minipage}
+%   \end{tabular}
+% \linefig
+% \end{figure}
+
 \begin{figure}[t]
-  \begin{tabular}{lc}
-    \begin{minipage}{3.5in}	
-	\includegraphics[width=3.5in]{slit_mapping.pdf}
-	\captionbaseline\caption{\small {\it Right:} The image slicing optics, which present a long pseudo-slit to the spectrometer. {\it Above :} The mapping of the 2-D focal plane to a single long pseudo-slit.  These figures adapated from \citet{looney03apj} for the design of FIFI-LS.}\label{fig:Slicer}
-    \end{minipage} &	
- \begin{minipage}{3in	}
-      \begin{center}	
-	\includegraphics[width=3in]{image_slicer_adapted.pdf}
-     \end{center}	
-   \end{minipage} 
-%   \begin{minipage}{2in}
- %  \end{minipage}
-  \end{tabular}
-\linefig
+\vspace{0.35in}
+  \begin{center}
+    \includegraphics[width=6.5in]{tracking_camera_placeholder.pdf}
+    \captionbaseline\caption{\small Ray trace of the optics for the tracking camera and the two spectrometer modules, showing the pick-off of the spectrometer slits from the telescope focus.}
+    \linefig\label{fig:TrackingCamera}
+  \end{center}
 \end{figure}
 
 \begin{figure}[t]
@@ -197,7 +201,8 @@ detecting element itself, so it is possible to engineer the device to bring the 
 fundamental photon noise.    For \icaris, as with MAKO and all of the current generation of KID systems, the first step is to bring the readout frequencies
 down from the microwave range (few GHz) into the RF range ($\sim\rm few\,\, 100$ MHz)
 %because \Sxx\ due to TLS fluctuations has a 1/$f_{\rm readout}^2$ dependence 
-to achieve high $Q$ (good muxing) with small volume (high responsivity) and to use cheaper, simpler electronics (see \cite{Zmuidzinas_12} for details).  Another key parameter is the capacitor electrode spacing $g$, or pitch of the interdigitated capacitors: increasing the pitch reduces the electric field in the dielectric, reducing the noise according to \Sxx$\propto g^{-1.6}$.   Finally, we have developed a new pixel array architecture particularly well-suited to \icaris\ and the other low-background applications in which all amorphous dielectric layers are eliminated.  It consists of simply a single layer of TiN patterned on the crystalline silicon wafer (Figure~\ref{fig:makonew}).   As Figure~\ref{fig:makonew} shows, \Sxx\ in this device is $1.0\times10^{-18}\,\rm Hz^{-1}$, a factor of 5--10 lower than the previous generation of devices using 2--3 metal layers and amorphous dielectric films.  The MAKO prototype 350\mum\ arrays are demonstrating in detail these sensitivity improvement; they are now clearly showing photon-noise-limited performance in laboratory measurements with 95\% pixel yield.   
+to achieve high $Q$ (good muxing) with small volume (high responsivity) and to use cheaper, simpler electronics (see \cite{Zmuidzinas_12} for details).  Another key parameter is the capacitor electrode spacing $g$, or pitch of the interdigitated capacitors: increasing the pitch reduces the electric field in the dielectric, reducing the noise according to \Sxx$\propto g^{-1.6}$.   Finally, we have developed a new pixel array architecture particularly well-suited to \icaris\ and the other low-background applications in which all amorphous dielectric layers are eliminated.  It consists of simply a single layer of TiN patterned on the crystalline silicon wafer (Figure~\ref{fig:makonew}).   As Figure~\ref{fig:makonew} shows, \Sxx\ in this device is $1.0\times10^{-18}\,\rm Hz^{-1}$, a factor of 5--10 lower than the previous generation of devices using 2--3 metal layers and amorphous dielectric films.  The MAKO prototype 350\mum\ arrays are demonstrating in detail these sensitivity improvement; they are now clearly 
+showing photon-noise-limited performance in laboratory measurements with 95\% pixel yield.   
 
 \begin{figure}[t!]
 \begin{center}
@@ -207,18 +212,21 @@ to achieve high $Q$ (good muxing) with small volume (high responsivity) and to u
 \includegraphics*[height=7cm,trim= 9cm 5.5cm 16cm 8.2cm]{mako_new_ledit}\\
 %\includegraphics*[width=8cm,bb=10 80 600 450]{MAKO_1}
 %\vspace{-0.2in}
-\captionbaseline\caption{\small  \icaris\ lens-coupled TiN KID array architecture.   Top, left shows a 432-pixel KID array (die is 22.5~mm on a side) for the MAKO 350-\mum\ ground-based camera.  A similar array has demonstrated photon-noise limited performance in the lab and is en-route to the CSO as of this writing.  Bottom shows the pixel detail.  A single TiN layer forms the both the meandered inductors (circular features) and the interdigitated capacitors (rectangular features).  The thick horizontal traces are the feed lines traversing the array (alternating polarity, so every other feedline is an effective ground).  This pictured device has hexagonal packing (shown schematically in black) with a per-pixel area of 1~mm$^2$ (1.07~mm short hex spacing), and is tuned for MAKO loading.  \icaris\ will use a similar design with a slightly larger total pixel area (1.36~mm short hex spacing) but smaller circular inductor (200~\mum\ diameter instead of the pictured 350~\mum\ diameter).  Top, right shows the fractional frequency noise measured in this device at 200~mK (left axis).  The right-hand axis shows the inferred NEP which will be obtained with the inductor specified for \icaris.  The rolloff above 200~Hz shows the resonator bandwidth, ample for \icaris. The rise below 1 Hz is due to a thermal drift in the stage temperature---it is unique to this measurement, and common across the array, so not relevant for \icaris. }
+\captionbaseline\caption{\small  \icaris\ lens-coupled TiN KID array architecture.   Top, left shows a 432-pixel KID array (die is 22.5~mm on a side) for the MAKO 350-\mum\ ground-based camera.  A similar array has demonstrated photon-noise limited performance in the lab and is en-route to the CSO as of this writing.  Bottom shows the pixel detail.  A single TiN layer forms the both the meandered inductors (circular features) and the interdigitated capacitors (rectangular features).  The thick horizontal traces are the feed lines traversing the array (alternating polarity, so every other feedline is an effective ground).  This pictured device has hexagonal packing (shown schematically in black) with a per-pixel area of 1~mm$^2$ (1.07~mm short hex spacing), and is tuned for MAKO loading.  \icaris\ will use a similar design with a slightly larger total pixel area (1.36~mm short hex spacing) but smaller circular inductor (200~\mum\ diameter instead of the pictured 350~\mum\ diameter).  Top, right shows the 
+fractional frequency noise measured in this device at 200~mK (left axis).  The right-hand axis shows the inferred NEP which will be obtained with the inductor specified for \icaris.  The rolloff above 200~Hz shows the resonator bandwidth, ample for \icaris. The rise below 1 Hz is due to a thermal drift in the stage temperature---it is unique to this measurement, and common across the array, so not relevant for \icaris. }
 \linefig\vspace{-0.35in} \label{fig:makonew}
 \end{center}
 \end{figure}
 
-\vspace{0.05in}{\bf Pixel design for \icaris.} \icaris\ will use this single-layer architecture, and the same 100--250~MHz resonant frequencies as MAKO.  It requires straightforward adjustments to accommodate the low loading and meet the required NEP.  First, we will reduce the volume of the meandered inductor by a factor of 16, increasing its response by this same factor.  The requirement to impedance match to the incident wave results in a invariant scaling between volume and area (a constant effective thickness), so that the volume reduction is also the area reduction.  The \icaris\ KID inductors will be patterned into circles of diameter 200~\mum.  Coupling through a microlens array (described below) will preserve good focal-plane filling.  The smaller inductor can provide the same total inductance, by simply meandering a smaller-width trace than (1.0~\mum\ wide instead of 2~\mum) -- our experience indicates that the failure rate is due to the total number of squares in the inductor, which is invariant since it scales as L, so we anticipate high yield ($>$90\%) as obtained with MAKO.  Second, we will use a lower \Tc\ TiN film, targeting 0.9~K instead of the 1.3~K used in MAKO.   Since the response scales at least as \Tc$^{-2}$, this provide a further factor of 2.1 increased response.  \Tc$\sim$0.9~K requires operation at T$\sim$180~mK, scaling from MAKO, but we baseline 150~mK to carry margin.  This is readily achievable with high duty cycle with a commercial adiabatic demagnetization refrigerator (ADR).   
+\vspace{0.05in}{\bf Pixel design for \icaris.} \icaris\ will use this single-layer architecture, and the same 100--250~MHz resonant frequencies as MAKO.  It requires straightforward adjustments to accommodate the low loading and meet the required NEP.  First, we will reduce the volume of the meandered inductor by a factor of 16, increasing its response by this same factor.  The requirement to impedance match to the incident wave results in a invariant scaling between volume and area (a constant effective thickness), so that the volume reduction is also the area reduction.  The \icaris\ KID inductors will be patterned into circles of diameter 200~\mum.  Coupling through a microlens array (described below) will preserve good focal-plane filling.  The smaller inductor can provide the same total inductance, by simply meandering a smaller-width trace than (1.0~\mum\ wide instead of 2~\mum) -- our experience indicates that the failure rate is due to the total number of squares in the inductor, which is invariant 
+since it scales as L, so we anticipate high yield ($>$90\%) as obtained with MAKO.  Second, we will use a lower \Tc\ TiN film, targeting 0.9~K instead of the 1.3~K used in MAKO.   Since the response scales at least as \Tc$^{-2}$, this provide a further factor of 2.1 increased response.  \Tc$\sim$0.9~K requires operation at T$\sim$180~mK, scaling from MAKO, but we baseline 150~mK to carry margin.  This is readily achievable with high duty cycle with a commercial adiabatic demagnetization refrigerator (ADR).   
 
 To offset the increase in TLS noise due to the lower operating temperature, we will increase the electrode spacing $g$.  NEP$_{\rm TLS} \propto \sqrt{\rm S_{\rm XX}} \propto \rm T_{\rm op} / g^{0.8}$, so a factor of 1.4 increase in $g$ is required to recover the measured TLS noise measured at 200~mK (Figure~\ref{fig:makonew}).   The larger $g$ reduces the capacitance slightly, but it can be compensated with an comparable increase in area, possible with our larger pixel pitch relative to the MAKO prototype.  In any case, the impact on the KID resonant frequency is small ($f=1/\sqrt{LC}$), and the devices will still lie in our target readout band extending up to 250~MHz.
 
 \icaris\ will field 2 arrays, each with 64 (spectral) $\times$25 (spatial) =1600 detectors, packed hexagonally with a 1.36-mm pitch.  Each will require 2 readout chains, with $\sim$800 channels each.  The goal will be to field this on a single wafer-sized die, but mosaicing 2 dies into the package is a fallback option, producing only a small gap in the spectral direction which can moved away from lines of interest by tuning the grating.  The package will provide a free-space $\lambda/4$ backshort under the device wafer, as used in MAKO.
 
-\vspace{0.05in}{\bf Silicon microlens array.}  Concentrating the radiation onto the small inductor requires a concentrating lens, and lens arrays have been designed and prototyped by our group.   Figure~\ref{fig:lenses} shows a prototype silicon lens array machined by Veldlaser (Heerenberg, Holland), as well as the measured profiles.   While \icaris\ requires somewhat greater concentration than these lenses, corresponding to a faster lens with greater curvature, this is not a problem for the laser manufacturing processes as arbitrary depths are possible.  We have performed electromagnetic simulations to verify that good efficiency can be achieved coupling to the 200-\mum-diameter. (Figure~\ref{fig:lenses}).   The lens is a hyperboloid with a total sag of 300~\mum (if sized at 1.5 mm), and it provides a total efficiency of $>$75\%.  To provide an anti-reflection (AR) coating, the lenses will be coated with a quarter-wavelength layer of parylene, a standard electronics packaging process.  The microlens arrays will be simply clamped to the KID arrays, aligned using a pin and slot jig.
+\vspace{0.05in}{\bf Silicon microlens array.}  Concentrating the radiation onto the small inductor requires a concentrating lens, and lens arrays have been designed and prototyped by our group.   Figure~\ref{fig:lenses} shows a prototype silicon lens array machined by Veldlaser (Heerenberg, Holland), as well as the measured profiles.   While \icaris\ requires somewhat greater concentration than these lenses, corresponding to a faster lens with greater curvature, this is not a problem for the laser manufacturing processes as arbitrary depths are possible.  We have performed electromagnetic simulations to verify that good efficiency can be achieved coupling to the 200-\mum-diameter. (Figure~\ref{fig:lenses}).   The lens is a hyperboloid with a total sag of 300~\mum (if sized at 1.5 mm), and it provides a total efficiency of $>$75\%.  To provide an anti-reflection (AR) coating, the lenses will be coated with a quarter-wavelength layer of parylene, a standard electronics packaging process.  The microlens arrays 
+will be simply clamped to the KID arrays, aligned using a pin and slot jig.
 
 \begin{figure}[t!]
 \begin{center}
@@ -324,11 +332,9 @@ the \blast\ architechture to support the larger off-axis \D\ mirror.}
 \end{figure}
 
 \subsection{Cryogenics} 
+\Responsible{Dicker, Devlin, Hailey-Dunsheath}{\color{red} \bf Need description of 1 K system; reviewers thought 15 psi referred to this system.  Need picture of spectrometer module in the cryostat.}
  
-The \name\ receiver consists of an optical cavity inside a long
-hold-time liquid-nitrogen and liquid-helium cryostat.  Both the
-nitrogen and helium are maintained at slightly more than 15~psi during
-the flight to minimize loss due to pressure drop at altitude.  A pumped pot maintains a 1~K stage with 20~mW of cooling power, which contains the entire spectrometer.  The detectors are cooled with a series of pumped $^3$He/$^4$He sorption fridges, which back a commercially available adiabatic demagnetization refigerator (ADR) to achieve a final temperature of 150 mK.
+The \name\ receiver consists of an optical cavity inside a long hold-time liquid-nitrogen and liquid-helium cryostat.  We are copying the design from Super BLASTpol.  Both the nitrogen and helium are maintained at slightly more than 15~psi during the flight to minimize loss due to pressure drop at altitude.  A pumped pot maintains a 1~K stage with 20~mW of cooling power, which contains the entire spectrometer.  The detectors are cooled with a series of pumped $^3$He/$^4$He sorption fridges, which back a commercially available adiabatic demagnetization refigerator (ADR) to achieve a final temperature of 150 mK.
 A two-stage $^3$He refrigerator (designed and manufactured at Penn) provides a
 300~mK sink during flight with $30\,\mu$W of cooling power for 3~days.  It is backed and cycled by a $^4$He stage.  It can be recycled within
 2~hrs.  Our groups have built over ten
@@ -397,4 +403,6 @@ efficiency that roughly doubles the sensitivity in the far red (where
 \name\ uses them).  This will allow us to obtain high-accuracy,
 continuously updated pointing solutions for our observations.
 
-
+% Results from a quick check of when we did an az el goto for a fridge cycle (10000 frames starting at 835200).  We only had the one star camera at this point, but it was working fairly well.
+% 
+% If I take Natalie's latest star camera solution and calculate the sigma for how much we bounced around I get ~3 arcsec in the elevation direction and ~10 in the cross elevation direction.  So that is a rough estimate of our precision.  Our accuracy (at least compared to the final pointing solution) was not as good: we were attempting to point at Az=50.7074, El=133.017.   If you look at the plot you can see that we appear to have been off by ~0.25 in Az and X-El.
